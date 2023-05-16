@@ -1,37 +1,43 @@
-#include<stdio.h>
-#include<cs50.h>
+#include <cs50.h>
+#include <stdio.h>
 
-int get_size(void);
-void print_grid(int size);
-
- int main(void)
-{
-    //get size of grid
-    int n = get_size();
-
-    //creates grid
-    print_grid(n);
-}
-
-int get_size(void)
+int main(void)
 {
     int n;
     do
     {
-        n = get_int("Size: ");
-    }
-    while(n < 1);
-    return n;
-}
 
-void print_grid(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-       
-        {
-            printf("#");
-        }
-        printf("\n");
+        n = get_int("Inter a positive interger between 1 and 8: ");
     }
-}
+        while(n < 1 || n > 8);
+//loop to build blocks
+
+  for(int i = 0; i < n; i++)
+  {
+    
+//print dots for right alignment
+    for(int k = 0;k<n-i; k++)
+         {
+          printf(".");
+         }
+
+//print blocks
+    for(int j = -1; j<i; j++)
+
+      {
+        printf("#");
+      }
+
+        printf("\n");
+
+    }
+
+  }
+
+
+
+
+
+
+
+
